@@ -7,10 +7,10 @@ const mostrarReloj = () => {
 
     const meses = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
     const dias = ['Dom','Lun','Mar','Mie','Jue','Vie','Sab'];
-    let diaSemana = dias[fecha.getDate()];
+    let diaSemana = dias[fecha.getDay()];
     let mes = meses[fecha.getMonth()];
-    let dia = fecha.getDay();
-    let fechaTexto = `${diaSemana}, ${dia} de ${mes}`;
+    let dia = [fecha.getDate()];
+    let fechaTexto = `${diaSemana} ${dia},  de ${mes}`;
     document.getElementById('fecha').innerHTML= fechaTexto;
 
     document.getElementById('contenedor').classList.toggle('animar'); //Con ClassList recuperamos todas las clases que se están aplicando en este caso a elemento contenedor.
